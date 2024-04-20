@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Gestión Estadística - Análisis, Datos y Estadíticas</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../../../assets/img/favicon.png" rel="icon">
+  <link href="../../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="../../assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="../../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="../../assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../../assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+ <!-- ======= Header ======= -->
+  
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="../../index.html" class="logo d-flex align-items-center">
+        <img src="../../../assets/img/logo.png" alt="">
+        <img src="../../../assets/img/logo_blanco.png" alt="">
+        <span class="d-none d-lg-block"></span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div>
+    <!-- End Logo -->
+
+    <div class="search-bar">
+      <form class="search-form d-flex align-items-center" method="POST" action="#">
+        <input type="text" name="query" placeholder="Filtrar Búsqueda" title="Enter search keyword">
+        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+      </form>
+    </div><!-- End Search Bar -->
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+
+        <li class="nav-item d-block d-lg-none">
+          <a class="nav-link nav-icon search-bar-toggle " href="#">
+            <i class="bi bi-search"></i>
+          </a>
+        </li><!-- End Search Icon-->
+
+        
+
+        <li class="nav-item dropdown pe-3">
+
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="../../assets/img/profile-img.jpg" alt="Upecita" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2">Usuario Invitado</span>
+          </a><!-- End Profile Iamge Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>Usuario Invitado</h6>
+              <span>Indicadores UPC-SA</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+          </ul><!-- End Profile Dropdown Items -->
+        </li><!-- End Profile Nav -->
+
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+  
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="index.html">
+          <i class="bi bi-bar-chart" style="color:green;"></i>
+          <span style="color:green;">Misionalidad</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+
+
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#estudiantes-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-people"></i><span>Estudiantes</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="estudiantes-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Aspirantes</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Admitidos</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Matriculados por primera vez</span>
+            </a>
+          </li>
+
+           <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Índice de selectividad</span>
+            </a>
+          </li>
+
+           <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Índice de absorción</span>
+            </a>
+          </li>
+
+           <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Matriculados</span>
+            </a>
+          </li>
+
+           <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Movilidad </span>
+            </a>
+          </li>
+
+           <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Saber pro</span>
+            </a>
+          </li>
+
+           <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Graduados</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Forms Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#docentes-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-person-fill"></i><span>Docencia</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="docentes-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Vinculación </span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Formación</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Categorización</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Movilidad </span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Forms Nav -->
+
+
+        <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#investigacion-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-search"></i><span>Investigación</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="investigacion-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Semilleros de Investigación </span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Grupos de investigación</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Investigadores </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Convocatorias</span>
+            </a>
+          </li>
+
+           <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Encuentros</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Forms Nav -->
+
+
+        <li class="nav-item">
+        <a class="nav-link collapsed" href="index.html">
+          <i class="bi bi-person-fill-add"></i>
+          <span>Extensión y Proyección Social</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+
+<li class="nav-item">
+        <a class="nav-link collapsed" href="index.html">
+          <i class="bi bi-bar-chart" style="color:green;"></i>
+          <span style="color:green;">De apoyo</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+
+
+<li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#financiera-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-cash-coin"></i><span>Financiera</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="financiera-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>--------</span>
+            </a>
+          </li>
+                    
+        </ul>
+      </li><!-- End Components Nav -->
+
+<li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#talento-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-gender-trans"></i><span>Talento Humano</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="talento-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>--------</span>
+            </a>
+          </li>
+                    
+        </ul>
+      </li><!-- End Components Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#medios-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-pc-display-horizontal"></i><span>Medios Educativos</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="medios-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>--------</span>
+            </a>
+          </li>
+                    
+        </ul>
+      </li><!-- End Components Nav -->
+
+
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#bienestar-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-universal-access"></i><span>Bienestar Institucional</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="bienestar-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="procesos/bienestar/pebi.html">
+              <i class="bi bi-circle"></i><span>PEBI</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Salud</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Cultura</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Deporte</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Pastoral Social</span>
+            </a>
+          </li>
+          
+        </ul>
+      </li><!-- End Components Nav -->
+
+
+<li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#infraestructura-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-building-add"></i><span>Infraestructura</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="infraestructura-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>--------</span>
+            </a>
+          </li>
+                    
+        </ul>
+      </li><!-- End Components Nav -->
+
+
+    
+<li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#comunicacion-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-chat-dots"></i><span>Comunicación</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="comunicacion-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>--------</span>
+            </a>
+          </li>
+                    
+        </ul>
+      </li><!-- End Components Nav -->
+
+      <li class="nav-heading">Inicio de Sesión</li>
+
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="pages-login.html">
+          <i class="bi bi-box-arrow-in-right"></i>
+          <span>Login</span>
+        </a>
+      </li><!-- End Login Page Nav --> 
+
+    </ul>
+
+  </aside><!-- End Sidebar-->
+
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>PEBI</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="../../index.html">Inicio</a></li>
+          <li class="breadcrumb-item">Bienestar</li>
+          <li class="breadcrumb-item active">PEBI</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+
+    <section class="section profile">
+      <div class="row">
+        <div class="col-xl-4">
+
+          <div class="card">
+            <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
+
+              <img src="../../assets/img/PEBI.png" alt="Profile" class="rounded-circle">
+              <h2>Usuario Invitado</h2>
+              <h3>Bienestar - PEBI</h3>
+              <div class="social-links mt-2">
+                <a href="https://twitter.com/upc_aguachica" class="twitter" target="_blank"><i class="bi bi-twitter"></i></a>
+                <a href="https://www.facebook.com/upcaguachica2017" class="facebook" target="_blank"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/stories/upcseccionalaguachica/3102576672680160541/" class="instagram" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.youtube.com/channel/UCYxOBqLXk1z33Q8u1iX50Lg" class="linkedin" target="_blank"><i class="bi bi-youtube"></i></a>
+                 <a href="https://bienestaraguachica.unicesar.edu.co/pebiaguachica/" class="linkedin" target="_blank"><i class="bi bi-browser-chrome"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-xl-8">
+
+          <div class="card">
+            <div class="card-body pt-3">
+              <!-- Bordered Tabs -->
+              <ul class="nav nav-tabs nav-tabs-bordered">
+
+                <li class="nav-item">
+                  <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#profile-overview">Indicadores</button>
+                </li>
+
+                <li class="nav-item">
+                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-edit">Metas</button>
+                </li>
+
+                <li class="nav-item">
+                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-settings">Análisis</button>
+                </li>
+
+                <li class="nav-item">
+                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-change-password">Informe</button>
+                </li>
+
+              </ul>
+              <div class="tab-content pt-2">
+
+                <div class="tab-pane fade show active profile-overview" id="profile-overview">
+                  <h5 class="card-title">Procesos Estratégicos PEBI</h5>
+
+                 <!-- General Form Elements -->
+              <form>
+              <div class="row mb-3">
+                  <label class="col-sm-2 col-form-label">Indicador</label>
+                  <div class="col-sm-10">
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>Seleccione el indicador</option>
+                      <option value="1">Indicador 1 "Tutorías POA"</option>
+                      <option value="2">Indicador 2 "Acompañamiento"</option>
+                      <option value="3">Indicador 3 "Articulación"</option>
+                      <option value="3">Indicador 4 "Atenciones SPADIES"</option>
+                    </select>
+                  </div>
+                </div>
+
+
+                 </form><!-- End General Form Elements -->  
+
+         <!-- Sección gráficas -->
+<section class="section">
+      <div class="row">
+
+        
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Deserción semestral</h5>
+
+              <!-- Line Chart -->
+              <div id="lineChart"></div>
+
+              <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                  new ApexCharts(document.querySelector("#lineChart"), {
+                    series: [{
+                      name: "Deserción %",
+                      data: [16.40,17.06,17.42,12.32,14.31,11.99,11.97,9.72,10.68,7.92,8.92,9.30,9.67,8.89]
+                    }],
+                    chart: {
+                      height: 350,
+                      type: 'line',
+                      zoom: {
+                        enabled: false
+                      }
+                    },
+                    dataLabels: {
+                      enabled: false
+                    },
+                    stroke: {
+                      curve: 'straight'
+                    },
+                    grid: {
+                      row: {
+                        colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+                        opacity: 0.5
+                      },
+                    },
+                    xaxis: {
+                      categories: ["2016-I", "2016-II", "2017-I", "2017-II", "2018-I", "2018-II", "2019-I","2019-II","2020-I","2020-II","2021-I","2021-II","2022-I","2022-II"],
+                    }
+                  }).render();
+                });
+              </script>
+              <!-- End Line Chart -->
+
+              <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                Fuente: Adaptado con datos del Sistema de información SPADIES
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+
+            </div>
+          </div>
+        
+</section>
+
+
+
+
+
+<!-- Fin Sección gráficas -->
+
+
+
+
+                </div>
+
+                <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
+
+                  <!-- Profile Edit Form -->
+
+                  <hr>
+                  <form>
+                    <div class="row mb-3">
+                      <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Nombre Indicador</label>
+                      <div class="col-md-8 col-lg-9">
+                         <h6>1. Permanencia y tutoria estudiantil</h6>
+                      </div>
+                    </div>
+
+                     <div class="row mb-3">
+                      <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Objetivo</label>
+                      <div class="col-md-8 col-lg-9">
+                         <h6>Mide el número de estudiantes en alto riesgo que son atendidos en el programa de permanencia estudiantil.</h6>
+                      </div>
+                    </div>
+
+                    <div class="row mb-3">
+                      <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Meta</label>
+                      <div class="col-md-8 col-lg-9">
+                         <h6>80%</h6>
+                      </div>
+                    </div>
+
+                  </form><!-- End Profile Edit Form -->
+                  <hr>
+
+                  <hr>
+                  <form>
+                    <div class="row mb-3">
+                      <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Nombre Indicador</label>
+                      <div class="col-md-8 col-lg-9">
+                         <h6>2. Acompañamiento estudiantil</h6>
+                      </div>
+                    </div>
+
+                     <div class="row mb-3">
+                      <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Objetivo</label>
+                      <div class="col-md-8 col-lg-9">
+                         <h6>Mide el número de estudiantes atendidos por las diferentes estrategias en el programa de permanencia estudiantil.</h6>
+                      </div>
+                    </div>
+
+                    <div class="row mb-3">
+                      <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Meta</label>
+                      <div class="col-md-8 col-lg-9">
+                         <h6>40%</h6>
+                      </div>
+                    </div>
+
+                  </form><!-- End Profile Edit Form -->
+                  <hr>
+
+                <hr>
+                  <form>
+                    <div class="row mb-3">
+                      <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Nombre Indicador</label>
+                      <div class="col-md-8 col-lg-9">
+                         <h6>3. Articulación programas académicos</h6>
+                      </div>
+                    </div>
+
+                     <div class="row mb-3">
+                      <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Objetivo</label>
+                      <div class="col-md-8 col-lg-9">
+                         <h6>Mide el número de programas académicos que implementan estrategias de acompañamiento  en el programa de permanencia estudiantil.</h6>
+                      </div>
+                    </div>
+
+                    <div class="row mb-3">
+                      <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Meta</label>
+                      <div class="col-md-8 col-lg-9">
+                         <h6>90%</h6>
+                      </div>
+                    </div>
+
+                  </form><!-- End Profile Edit Form -->
+                  <hr>
+
+                  <hr>
+                  <form>
+                    <div class="row mb-3">
+                      <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Nombre Indicador</label>
+                      <div class="col-md-8 col-lg-9">
+                         <h6>4. Registros de sistema deinformación institucional</h6>
+                      </div>
+                    </div>
+
+                     <div class="row mb-3">
+                      <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Objetivo</label>
+                      <div class="col-md-8 col-lg-9">
+                         <h6>Mide el número de estudiantes registrados en los diferentes sistemas de información institucional y del ministerio de Educación Nacional</h6>
+                      </div>
+                    </div>
+
+                    <div class="row mb-3">
+                      <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Meta</label>
+                      <div class="col-md-8 col-lg-9">
+                         <h6>90%</h6>
+                      </div>
+                    </div>
+
+                  </form><!-- End Profile Edit Form -->
+                  <hr>
+
+                </div>
+
+                <div class="tab-pane fade pt-3" id="profile-settings">
+
+                  <!-- Settings Form -->
+                  <form>
+
+                    <div class="row mb-3">
+                      <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Análisis</label>
+                      <div class="col-md-8 col-lg-9">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="changesMade" checked>
+                          <label class="form-check-label" for="changesMade" style="text-align: justify;">
+                            Aunque a medida que han pasado los semestres, se ha incrementado el número de estudiantes atendidos, aún no es suficiente, por ende es necesario mayor personal para la atención de tutorías y la atención psicosocial de los estudiantes.
+                          </label>
+                        </div>   
+                      </div>
+                    </div>
+
+                      <div class="row mb-3">
+                      <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Análisis</label>
+                      <div class="col-md-8 col-lg-9">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="changesMade" checked>
+                          <label class="form-check-label" for="changesMade" style="text-align: justify;">
+                            Una de las falencias encontradas para llegar a alcanzar un mayor número de estudiantes atendidos es la falta de docentes tutores para algunas asignaturas de alto riesgo académico y el número de psicólogas asignadas no es suficiente para la atención del personal estudiantil.
+                          </label>
+                        </div>   
+                      </div>
+                    </div>
+
+
+                     <div class="row mb-3">
+                      <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Análisis</label>
+                      <div class="col-md-8 col-lg-9">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="changesMade" checked>
+                          <label class="form-check-label" for="changesMade" style="text-align: justify;">
+                           Los programas de Contaduría Pública y Administración de empresas no han tenido tutorías académicas los últimos semestre lo que incide en el bajo porcentaje, adicional se tiene un programa de postgrado desde el semestre 2020-1, al cual no se le ha realizado ningún seguimiento desde el programa de permanencia y bienestar institucional, ya que ésta deserción aún no se ve reflejada en el sistema para la prevención y el análisis de la derserción en las Insituciones de Educación Superior SPADIES
+                          </label>
+                        </div>   
+                      </div>
+                    </div>
+
+                     <div class="row mb-3">
+                      <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Análisis</label>
+                      <div class="col-md-8 col-lg-9">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="changesMade" checked>
+                          <label class="form-check-label" for="changesMade" style="text-align: justify;">
+                            Aunque a medida que han pasado los semestres, se ha incrementado el número de estudiantes atendidos, aún no es suficiente, por ende es necesario mayor personal para la atención de tutorías y la atención psicosocial de los estudiantes. Sería viable implementar estrategias o proyectos donde los estudiantes con muy buen promedio en las asignaturas puedan dar tutorías a los etudiantes con bajo rendimiento académico.
+                          </label>
+                        </div>   
+                      </div>
+                    </div>
+
+                  </form><!-- End settings Form -->
+
+                </div>
+
+                <div class="tab-pane fade pt-3" id="profile-change-password">
+                  <!-- Change Password Form -->
+                  <form>
+
+                    <div class="row mb-3">
+                      <label for="newPassword" class="col-md-4 col-lg-3 col-form-label">Descargar Informe</label>
+                      <div class="col-md-8 col-lg-9">
+                       <a href="archivos/InformePEBI.pdf" download="InformePEBI-2023.pdf">Clic</a>
+                      </div>
+                    </div>
+
+                  </form><!-- End Change Password Form -->
+
+                </div>
+
+              </div><!-- End Bordered Tabs -->
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>Universidad Popular del Cesar seccional Aguachica</span>. All Rights Reserved
+    </div>
+    
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../../assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="../../assets/vendor/echarts/echarts.min.js"></script>
+  <script src="../../assets/vendor/quill/quill.min.js"></script>
+  <script src="../../assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="../../assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="../../assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../../assets/js/main.js"></script>
+
+</body>
+
+</html>
